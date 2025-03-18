@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
 /* Define CSS variables for colors */
 :root {
     --primary-color: #007bff;  /* Blue */
@@ -42,7 +50,7 @@ a:hover {
 
 /* Default padding and margin for sections */
 header, main, footer {
-    padding: 20px;
+    /* padding: 20px; */
     margin-bottom: 20px;
 }
 button {
