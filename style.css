@@ -309,7 +309,20 @@ a:hover {
             }
         }
 
+        /* Trusted companies */
+        .trusted-companies {
+            .trusted-companies-group {
+                flex-direction: column;
+                padding-top: 1% !important;
+                justify-content: center !important;
+                min-height: fit-content;
+            }
 
+            .company-logos {
+                gap: 14px !important;
+                justify-content: center !important;
+            }
+        }
     }
 
     @media (max-width: 768px) {
