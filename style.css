@@ -241,38 +241,6 @@ a:hover {
             }
         }
 
-        .trusted-companies {
-            width: 100%;
-            min-height: 132px;
-            background-color: #FFFFFF;
-            padding: 2%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .trusted-companies-group {
-                max-width: 1240px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .trusted-title {
-                color: #000000 !important;
-                font-weight: 500;
-                font-size: 16px;
-            }
-
-            .company-logos {
-                width: fit-content;
-                display: flex;
-                gap: 20px;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-        }
     }
 
     /* Hero Section Media Queries */
@@ -310,19 +278,7 @@ a:hover {
         }
 
         /* Trusted companies */
-        .trusted-companies {
-            .trusted-companies-group {
-                flex-direction: column;
-                padding-top: 1% !important;
-                justify-content: center !important;
-                min-height: fit-content;
-            }
 
-            .company-logos {
-                gap: 14px !important;
-                justify-content: center !important;
-            }
-        }
     }
 
     @media (max-width: 768px) {
