@@ -1,0 +1,269 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Define Root Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ff5722;
+    /* Orange */
+    --background-color: #f8f9fa;
+    /* Light Gray */
+    --text-color: #333;
+    /* Dark Gray */
+}
+
+/* Apply Styles to the Body */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Choose a readable font */
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Improve readability */
+    color: var(--text-color);
+    /* Use defined color */
+    background-color: var(--background-color);
+    /* Set page background */
+    /* padding: 20px; */
+    /* Add some spacing around the content */
+    background-color: #F2F5F6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Space below headings */
+}
+
+/* Paragraphs */
+
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+    /* Removes default browser styles */
+    cursor: pointer;
+    outline: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* CTA Banner Section */
+#cta-banner {
+    width: 100%;
+    background-color: #12141D;
+    /* height: 520px; */
+    margin: auto;
+    position: relative;
+
+    .container {
+        max-width: 1220px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 520px;
+        padding: 2% 2% 0% 2%;
+    }
+
+    .cta-content {
+        max-width: 673px;
+        min-height: 312px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-bottom: 5%;
+
+        h2 {
+            margin-bottom: 15px;
+            color: #FFFFFF;
+            font-family: Lato;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+            letter-spacing: -2%;
+            text-transform: capitalize;
+        }
+
+        p {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
+        }
+    }
+
+    .cta-button {
+        background-color: #F0B73F;
+        color: #FFFFFF;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        width: 273px;
+        height: 64px;
+        gap: 25px;
+        border-radius: 55px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &:hover {
+            background-color: #FF9800;
+        }
+    }
+
+    .cta-image {
+        position: relative;
+        display: inline-block;
+        justify-content: end;
+        justify-content: flex-end;
+        display: flex;
+
+        .img1 {
+            max-width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+            bottom: 0%;
+
+        }
+
+        .img2 {
+            position: absolute;
+            width: 104px;
+            bottom: 0%;
+            z-index: 20;
+            right: 10%;
+
+        }
+
+        .img3 {
+            position: absolute;
+            width: 104px;
+            z-index: 1;
+            right: -6%;
+            height: 70%;
+            bottom: 0%;
+
+        }
+
+        .img4 {
+            position: absolute;
+            width: 104px;
+            z-index: 10;
+            left: 0%;
+            /* height: 70%; */
+            bottom: 0%;
+
+        }
+    }
+
+    @media (max-width: 920px) {
+        #cta-banner {
+            min-height: 100%;
+            position: relative;
+        }
+
+        .cta-content {
+            /* align-items: center; */
+            gap: 12px;
+            background-color: #12141D;
+
+            h2 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 38px;
+                text-align: left;
+            }
+
+            .cta-button {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0%;
+
+            }
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            height: fit-content;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 4% 4% 0% 4%;
+
+        }
+
+        .cta-content {
+            max-width: 100%;
+            min-height: 0px;
+            height: fit-content;
+        }
+
+        .cta-image {
+            width: 70vw;
+            margin-top: 20px;
+
+            .img2 {
+                width: 54px;
+
+            }
+
+            .img3 {
+                width: 54px;
+            }
+
+            .img4 {
+                width: 54px;
+
+            }
+        }
+    }
+
+    @media (max-width: 425px) {
+
+
+        .cta-content {
+            align-items: center;
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+    }
+}
