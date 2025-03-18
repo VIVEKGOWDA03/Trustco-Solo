@@ -936,5 +936,38 @@ a:hover {
         }
     }
 
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .container {
+            gap: 20px;
+        }
 
+        .numbers-grid {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 10px;
+
+        .number-card {
+            width: 200px;
+            height: 160px;
+
+            .number {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .number-card {
+            width: 180px;
+            height: 140px;
+        }
+    }
 }
