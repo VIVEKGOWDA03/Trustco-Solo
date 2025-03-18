@@ -1,0 +1,282 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Define Root Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ff5722;
+    /* Orange */
+    --background-color: #f8f9fa;
+    /* Light Gray */
+    --text-color: #333;
+    /* Dark Gray */
+}
+
+/* Apply Styles to the Body */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Choose a readable font */
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Improve readability */
+    color: var(--text-color);
+    /* Use defined color */
+    background-color: var(--background-color);
+    /* Set page background */
+    /* padding: 20px; */
+    /* Add some spacing around the content */
+    background-color: #F2F5F6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Space below headings */
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+    /* Removes default browser styles */
+    cursor: pointer;
+    outline: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Blogs Section */
+#blogs {
+    max-width: 1140px;
+    margin: 50px auto;
+    padding: 20px;
+
+    .blogs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        h2 {
+            font-weight: bold;
+            color: #12141D;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+        }
+
+        .brand {
+            color: #043A53;
+        }
+
+        .see-all {
+            text-decoration: none;
+            color: #12141D;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: right;
+            vertical-align: middle;
+        }
+    }
+
+    .blogs-container {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                width: 100%;
+                height: 257px;
+                object-fit: cover;
+            }
+
+            .content {
+                padding: 15px;
+
+                .date {
+                    color: #000000;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #404040;
+                }
+
+                h3 {
+                    margin: 10px 0;
+                    color: #000000;
+                    font-family: Lato;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                    letter-spacing: 0%;
+                }
+
+                .excerpt {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #404040;
+                }
+
+                .read-more {
+                    display: block;
+                    margin-top: 10px;
+                    color: #12141D;
+                    text-decoration: none;
+                    font-family: Lato;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: 0%;
+                    text-align: left;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .see-all-mobile {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .blogs-header {
+
+            h2 {
+                font-weight: 700;
+                
+                font-size: 30px;
+                line-height: 38px;
+                text-align: center;
+
+            }
+
+            .see-all {}
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .blogs-container {
+            overflow: scroll;
+
+
+
+            .blog-card {
+                min-width: 258px;
+
+                img {}
+
+                .content {
+                    .date {
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                    }
+
+                    span {}
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 28px;
+
+                    }
+
+                    .excerpt {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    .read-more {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 20px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .see-all-mobile {
+            display: block;
+            text-align: center;
+            margin-top: 32px;
+
+            a {
+                text-decoration: none;
+                color: #12141D !important;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+        }
+
+        .see-all {
+            display: none;
+        }
+    }
+}
