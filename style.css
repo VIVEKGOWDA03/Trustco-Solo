@@ -899,11 +899,8 @@ a:hover {
 
             .number-card {
                 background: white;
-                padding: 20px;
                 width: 237px;
                 height: 120px;
-                /* border-radius: 12px; */
-                /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -955,19 +952,25 @@ a:hover {
             height: 160px;
 
             .number {
-                font-size: 32px;
+                font-weight: 700 !important;
+                font-size: 36px !important;
+                line-height: 44px !important;
+
             }
 
             p {
-                font-size: 16px;
+                font-weight: 500 !important;
+                font-size: 16px !important;
+                line-height: 24px !important;
+                text-align: center;
             }
         }
     }
 
     @media (max-width: 480px) {
         .number-card {
-            width: 180px;
-            height: 140px;
+            width: 180px !important;
+            height: 140px !important;
         }
     }
 }
