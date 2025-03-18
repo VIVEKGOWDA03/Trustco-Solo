@@ -1383,3 +1383,121 @@ a:hover {
     }
 
 }
+
+/* Blogs Section */
+#blogs {
+    max-width: 1140px;
+    margin: 50px auto;
+    padding: 20px;
+
+    .blogs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        h2 {
+            font-weight: bold;
+            color: #12141D;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+        }
+
+        .brand {
+            color: #043A53;
+        }
+
+        .see-all {
+            text-decoration: none;
+            color: #12141D;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: right;
+            vertical-align: middle;
+        }
+    }
+
+    .blogs-container {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                width: 100%;
+                height: 257px;
+                object-fit: cover;
+            }
+
+            .content {
+                padding: 15px;
+
+                .date {
+                    color: #000000;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #404040;
+                }
+
+                h3 {
+                    margin: 10px 0;
+                    color: #000000;
+                    font-family: Lato;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                    letter-spacing: 0%;
+                }
+
+                .excerpt {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #404040;
+                }
+
+                .read-more {
+                    display: block;
+                    margin-top: 10px;
+                    color: #12141D;
+                    text-decoration: none;
+                    font-family: Lato;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: 0%;
+                    text-align: left;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .see-all-mobile {
+        display: none;
+    }
+
+}
