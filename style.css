@@ -550,3 +550,105 @@ a:hover {
         height: max-content;
     }
 }
+
+
+/* Benefits Section */
+#benefits {
+    width: 100%;
+    height: 100%;
+    min-height: 670px;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 0%;
+
+    .section-title {
+        width: 100%;
+        max-width: 256px;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        button {
+            width: fit-content;
+            color: #FFFFFF;
+            padding: 4px 24px;
+            border-radius: 100px;
+            height: 43px;
+            background-color: #043A53;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 35px;
+
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+            color: #12141D;
+        }
+
+        p {
+            font-family: Lato;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #12141D;
+            text-align: justify;
+        }
+    }
+
+    .benefits-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .benefit-card {
+            background: #F2F5F6;
+            padding: 20px;
+            width: 280px;
+            min-height: 390px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                width: 93px;
+                height: 84px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                color: #12141D;
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            p {
+                color: #404040;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+
+}
