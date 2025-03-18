@@ -1,50 +1,65 @@
-/* Apply box-sizing to all elements */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
-/* Define CSS variables for colors */
+/* Define Root Variables for Colors */
 :root {
-    --primary-color: #007bff;  /* Blue */
-    --secondary-color: #6c757d; /* Gray */
-    --accent-color: #ff5722;   /* Orange */
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ff5722;
+    /* Orange */
+    --background-color: #f8f9fa;
+    /* Light Gray */
     --text-color: #333;
-    --bg-color: #f8f9fa;
+    /* Dark Gray */
 }
 
-/* Apply global font and background color */
+/* Apply Styles to the Body */
 body {
     font-family: 'Arial', sans-serif;
+    /* Choose a readable font */
     font-size: 16px;
+    /* Base font size */
     line-height: 1.6;
+    /* Improve readability */
     color: var(--text-color);
-    background-color: var(--bg-color);
-    padding: 20px;
+    /* Use defined color */
+    background-color: var(--background-color);
+    /* Set page background */
+    /* padding: 20px; */
+    /* Add some spacing around the content */
+    background-color: #F2F5F6;
 }
 
-/* Heading styles */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Space below headings */
+}
+
+/* Paragraphs */
+p {
     margin-bottom: 10px;
 }
 
-/* Link styles */
+/* Links */
 a {
     color: var(--primary-color);
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Default padding and margin for sections */
-header, main, footer {
-    padding: 20px;
-    margin-bottom: 20px;
-}
 button {
     all: unset;
     /* Removes default browser styles */
@@ -52,6 +67,17 @@ button {
     outline: none;
 }
 
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 #hero {
     width: 100%;
@@ -64,7 +90,7 @@ button {
         flex-direction: column;
         justify-content: space-between;
 
-        .NavBar {
+        .navbar {
             height: 98px;
             width: 100%;
             display: flex;
@@ -72,11 +98,11 @@ button {
             align-items: center;
             justify-content: space-between;
 
-            .company.logo {
+            .logo {
                 height: 24px;
             }
 
-            .hero-nav {
+            .navigation {
                 ul {
                     font-family: Lato;
                     font-weight: 800;
@@ -96,7 +122,7 @@ button {
                 }
             }
 
-            .login-signin-btn {
+            .auth-buttons {
                 display: flex;
                 gap: 10px;
 
@@ -128,32 +154,32 @@ button {
             }
         }
 
-        .Banner {
+        .hero-banner {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            .Banner-item {
+            .banner-content {
                 width: 100%;
                 max-width: 1220px;
                 min-height: 320px;
                 display: flex;
                 justify-content: space-between;
 
-                .banner-one {}
+                .banner-image-left {}
 
-                .banner-four {
+                .banner-image-group {
                     display: none;
                 }
 
-                .banner-two {
+                .banner-text {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
 
-                    .Hero_Tag {
+                    .hero-tagline {
                         font-family: Lato;
                         font-weight: 800;
                         font-size: 64px;
@@ -161,19 +187,19 @@ button {
                         text-align: center;
                         color: #12141D;
 
-                        .span {
+                        .highlight-text {
                             color: #043A53 !important;
                         }
                     }
 
-                    .hero-subtag {
+                    .hero-subtagline {
                         font-weight: 500;
                         font-size: 20px;
                         text-align: center;
                         color: #12141D !important;
                     }
 
-                    .CTA {
+                    .cta-buttons {
                         margin-top: 28px;
                         width: fit-content;
                         display: flex;
@@ -181,7 +207,7 @@ button {
                         align-items: center;
                         justify-content: center;
 
-                        .cta-one {
+                        .cta-start-btn {
                             width: 141px;
                             background-color: #043A53;
                             border-radius: 42px;
@@ -192,8 +218,7 @@ button {
                             text-align: center;
                         }
 
-
-                        .cta-two {
+                        .cta-video-btn {
                             width: 235px;
                             height: 60px;
                             display: flex;
@@ -212,11 +237,11 @@ button {
                     }
                 }
 
-                .banner-three {}
+                .banner-image-right {}
             }
         }
 
-        .ClientBrandsSection {
+        .trusted-companies {
             width: 100%;
             min-height: 132px;
             background-color: #FFFFFF;
@@ -225,7 +250,7 @@ button {
             align-items: center;
             justify-content: center;
 
-            .grp {
+            .trusted-companies-group {
                 max-width: 1240px;
                 width: 100%;
                 display: flex;
@@ -233,13 +258,13 @@ button {
                 justify-content: space-between;
             }
 
-            .p {
+            .trusted-title {
                 color: #000000 !important;
                 font-weight: 500;
                 font-size: 16px;
             }
 
-            .compnay-grp {
+            .company-logos {
                 width: fit-content;
                 display: flex;
                 gap: 20px;
@@ -250,4 +275,100 @@ button {
         }
     }
 
+    /* Hero Section Media Queries */
+    @media (max-width: 1024px) {
+        .banner-text {
+            padding: 0 5%;
+        }
+
+        .banner-image-left,
+        .banner-image-right,
+        .navigation,
+        .login-btn,
+        .signin-btn {
+            display: none;
+        }
+
+        .auth-buttons {
+            .menu-btn {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 980px) {
+        .hero-container {
+            .navbar {
+                min-height: 72px;
+
+                .auth-buttons {
+                    .menu-btn {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        /* Trusted companies */
+        .trusted-companies {
+            .trusted-companies-group {
+                flex-direction: column;
+                padding-top: 1% !important;
+                justify-content: center !important;
+                min-height: fit-content;
+            }
+
+            .company-logos {
+                gap: 14px !important;
+                justify-content: center !important;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-tagline {
+            font-weight: 700 !important;
+            font-size: 36px !important;
+            line-height: 44px !important;
+        }
+
+        .hero-subtagline {
+            font-weight: 500;
+            font-size: 14px !important;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 426px) {
+        .hero-container {
+            .hero-banner {
+                .banner-content {
+                    flex-direction: column;
+
+                    .banner-image-group {
+                        display: flex !important;
+
+                        .img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        .banner-image-group {
+            justify-content: center;
+            width: 100%;
+
+            .image-two {
+                display: none;
+            }
+        }
+    }
 }
