@@ -650,5 +650,70 @@ a:hover {
         }
     }
 
+    /* Media Queries */
+    @media (max-width: 1024px) {
+        .section-title {
+            text-align: center;
+        }
 
+        .benefits-container {
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-title {
+            h1 {
+                font-size: 48px;
+                line-height: 58px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .benefits-container {
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            align-items: center;
+            gap: 16px;
+            max-width: 80%;
+
+            button {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                height: 28px;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0%;
+                text-align: center;
+            }
+
+            p {
+                font-family: Lato;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+
+
+            }
+        }
+
+        .benefit-card {
+            width: 100%;
+            max-width: 280px;
+        }
+    }
 }
