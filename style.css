@@ -1,0 +1,47 @@
+/* Apply box-sizing to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for colors */
+:root {
+    --primary-color: #007bff;  /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --accent-color: #ff5722;   /* Orange */
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+}
+
+/* Apply global font and background color */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Link styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Default padding and margin for sections */
+header, main, footer {
+    padding: 20px;
+    margin-bottom: 20px;
+}
