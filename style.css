@@ -80,203 +80,104 @@ a:hover {
 }
 
 
-/* Blogs Section */
-#blogs {
-    max-width: 1140px;
-    margin: 50px auto;
-    padding: 20px;
+/* CTA Banner Section */
+#cta-banner {
+    width: 100%;
+    background-color: #12141D;
+    height: 520px;
+    margin: auto;
 
-    .blogs-header {
+    .container {
+        max-width: 1220px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin-bottom: 30px;
+        justify-content: space-between;
+    }
+
+    .cta-content {
+        max-width: 673px;
+        min-height: 312px;
 
         h2 {
-            font-weight: bold;
-            color: #12141D;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+            font-family: Lato;
             font-weight: 700;
             font-size: 60px;
             line-height: 72px;
+            letter-spacing: -2%;
+            text-transform: capitalize;
         }
 
-        .brand {
-            color: #043A53;
-        }
-
-        .see-all {
-            text-decoration: none;
-            color: #12141D;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 28px;
-            text-align: right;
-            vertical-align: middle;
+        p {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
         }
     }
 
-    .blogs-container {
+    .cta-button {
+        background-color: #F0B73F;
+        color: #FFFFFF;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        width: 273px;
+        height: 64px;
+        gap: 25px;
+        border-radius: 55px;
         display: flex;
-        gap: 20px;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
 
-        .blog-card {
-            background: white;
+        &:hover {
+            background-color: #FF9800;
+        }
+    }
+
+    .cta-image {
+        position: relative;
+        display: inline-block;
+        justify-content: end;
+
+        .img1 {
+            max-width: 100%;
+            height: 500px;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            transition: transform 0.3s ease-in-out;
+            position: relative;
+            z-index: 10;
+            /* position: absolute; */
+            bottom: 0%;
+        }
 
-            &:hover {
-                transform: translateY(-5px);
-            }
+        .img2 {
+            position: absolute;
+            width: 104px;
+            bottom: 1.3%;
+            z-index: 20;
+            right: 10%;
 
-            img {
-                width: 100%;
-                height: 257px;
-                object-fit: cover;
-            }
+        }
 
-            .content {
-                padding: 15px;
+        .img3 {
+            position: absolute;
+            width: 104px;
+            z-index: 1;
+            right: -6%;
+            height: 70%;
+            bottom: 1%;
+        }
 
-                .date {
-                    color: #000000;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-
-                span {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: #404040;
-                }
-
-                h3 {
-                    margin: 10px 0;
-                    color: #000000;
-                    font-family: Lato;
-                    font-weight: 700;
-                    font-size: 24px;
-                    line-height: 32px;
-                    letter-spacing: 0%;
-                }
-
-                .excerpt {
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 28px;
-                    color: #404040;
-                }
-
-                .read-more {
-                    display: block;
-                    margin-top: 10px;
-                    color: #12141D;
-                    text-decoration: none;
-                    font-family: Lato;
-                    font-weight: 700;
-                    font-size: 18px;
-                    line-height: 28px;
-                    letter-spacing: 0%;
-                    text-align: left;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
+        .img4 {
+            position: absolute;
+            width: 104px;
+            z-index: 10;
+            left: 0%;
+            /* height: 70%; */
+            bottom: 2%;
         }
     }
 
-    .see-all-mobile {
-        display: none;
-    }
-
-    @media (max-width: 768px) {
-        .blogs-header {
-
-            h2 {
-                font-weight: 700;
-                
-                font-size: 30px;
-                line-height: 38px;
-                text-align: center;
-
-            }
-
-            .see-all {}
-        }
-
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-        .blogs-container {
-            overflow: scroll;
-
-
-
-            .blog-card {
-                min-width: 258px;
-
-                img {}
-
-                .content {
-                    .date {
-                        font-weight: 700;
-                        font-size: 12px;
-                        line-height: 18px;
-                        letter-spacing: 0%;
-                    }
-
-                    span {}
-
-                    h3 {
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 28px;
-
-                    }
-
-                    .excerpt {
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 20px;
-                    }
-
-                    .read-more {
-                        font-weight: 700;
-                        font-size: 14px;
-                        line-height: 20px;
-
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: 500px) {
-        .see-all-mobile {
-            display: block;
-            text-align: center;
-            margin-top: 32px;
-
-            a {
-                text-decoration: none;
-                color: #12141D !important;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 28px;
-            }
-
-        }
-
-        .see-all {
-            display: none;
-        }
-    }
 }
