@@ -129,3 +129,12 @@ a:hover {
     }
 }
 
+
+@media (max-width: 768px) {
+    .containers {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
