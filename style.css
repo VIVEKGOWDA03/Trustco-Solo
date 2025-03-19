@@ -1,0 +1,254 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Define Root Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ff5722;
+    /* Orange */
+    --background-color: #f8f9fa;
+    /* Light Gray */
+    --text-color: #333;
+    /* Dark Gray */
+}
+
+/* Apply Styles to the Body */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Choose a readable font */
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Improve readability */
+    color: var(--text-color);
+    /* Use defined color */
+    background-color: var(--background-color);
+    /* Set page background */
+    /* padding: 20px; */
+    /* Add some spacing around the content */
+    background-color: #F2F5F6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Space below headings */
+}
+
+/* Paragraphs */
+
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+    /* Removes default browser styles */
+    cursor: pointer;
+    outline: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.content {
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Footer Styles */
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-logo {
+        width: 247px;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        align-items: flex-start;
+
+        img {
+            width: 211px;
+            height: 32px;
+
+        }
+
+        .grp-img {
+            display: flex;
+            gap: 16px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .para {
+        width: 100%;
+        max-width: 395px;
+        text-align: left;
+        height: 230px;
+        color: #404040;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .Nav {
+        display: flex;
+        gap: 90px;
+        height: 100%;
+        max-height: 230px;
+
+        .footer-nav {
+            width: 114px;
+
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                h2 {
+                    text-align: left;
+                    color: #12141D;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+
+                li {
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    text-align: left;
+                    margin-top: 32px;
+
+                    a {
+                        color: #404040;
+                        text-decoration: none;
+                        font-size: 14px;
+                        transition: color 0.3s ease;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 28px;
+
+
+                        &:hover {
+                            color: #00aaff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1040px) {
+        .footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 70%;
+        }
+
+        .Nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .footer-nav {
+                width: 114px;
+
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+
+        .footer-logo {
+            height: fit-content;
+            margin-bottom: 24px;
+            gap: 24px;
+        }
+
+        .para {
+            height: fit-content;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .para {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: justify;
+        }
+
+        .footer-nav {
+            ul {
+                h2 {
+                    font-size: 18px !important;
+                    line-height: 28px;
+
+                }
+
+                li {
+                    a {
+                        font-weight: 500;
+                        font-size: 16px !important;
+                        line-height: 24px;
+
+                    }
+                }
+            }
+        }
+    }
+}
