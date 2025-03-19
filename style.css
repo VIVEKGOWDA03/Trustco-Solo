@@ -87,9 +87,10 @@ a:hover {
 
 /* Footer Styles */
 
-footer {
+.footer {
     background-color: #f8f9fa;
     padding: 40px 20px;
+
 
     .footer-container {
         display: flex;
@@ -177,6 +178,74 @@ footer {
                         &:hover {
                             color: #00aaff;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1040px) {
+        .footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 70%;
+        }
+
+        .Nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .footer-nav {
+                width: 114px;
+
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+
+        .footer-logo {
+            height: fit-content;
+            margin-bottom: 24px;
+            gap: 24px;
+        }
+
+        .para {
+            height: fit-content;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .para {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: justify;
+        }
+
+        .footer-nav {
+            ul {
+                h2 {
+                    font-size: 18px !important;
+                    line-height: 28px;
+
+                }
+
+                li {
+                    a {
+                        font-weight: 500;
+                        font-size: 16px !important;
+                        line-height: 24px;
+
                     }
                 }
             }
