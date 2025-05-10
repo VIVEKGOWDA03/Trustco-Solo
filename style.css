@@ -1,0 +1,269 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Define Root Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ff5722;
+    /* Orange */
+    --background-color: #f8f9fa;
+    /* Light Gray */
+    --text-color: #333;
+    /* Dark Gray */
+}
+
+/* Apply Styles to the Body */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Choose a readable font */
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Improve readability */
+    color: var(--text-color);
+    /* Use defined color */
+    background-color: var(--background-color);
+    /* Set page background */
+    /* padding: 20px; */
+    /* Add some spacing around the content */
+    background-color: #F2F5F6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Space below headings */
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+    /* Removes default browser styles */
+    cursor: pointer;
+    outline: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+/* Benefits Section */
+#benefits {
+    width: 100%;
+    height: 100%;
+    min-height: 670px;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 0%;
+
+
+    .section-title {
+        width: 100%;
+        max-width: 256px;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        button {
+            width: fit-content;
+            color: #FFFFFF;
+            padding: 4px 24px;
+            border-radius: 100px;
+            height: 43px;
+            background-color: #043A53;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 35px;
+
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+            color: #12141D;
+        }
+
+        p {
+            font-family: Lato;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #12141D;
+            text-align: justify;
+        }
+    }
+
+    .benefits-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .benefit-card {
+            background: #F2F5F6;
+            padding: 20px;
+            width: 280px;
+            min-height: 390px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                width: 93px;
+                height: 84px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                color: #12141D;
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            p {
+                color: #404040;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    /* Media Queries */
+    @media (max-width: 1200px) {
+        #benefits {
+            flex-wrap: wrap;
+        }
+
+        .section-title {
+            width: 100%;
+            align-items: center;
+            max-width: 80%;
+            gap: 16px !important;
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .section-title {
+            text-align: center;
+        }
+
+        .benefits-container {
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-title {
+            h1 {
+                font-size: 48px;
+                line-height: 58px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .benefits-container {
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            align-items: center;
+            gap: 16px;
+            max-width: 80%;
+
+            button {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                height: 28px;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0%;
+                text-align: center;
+            }
+
+            p {
+                font-family: Lato;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+
+
+            }
+        }
+
+        .benefit-card {
+            width: 100%;
+            max-width: 280px;
+        }
+    }
+}
