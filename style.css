@@ -1,0 +1,188 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Define Root Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ff5722;
+    /* Orange */
+    --background-color: #f8f9fa;
+    /* Light Gray */
+    --text-color: #333;
+    /* Dark Gray */
+}
+
+/* Apply Styles to the Body */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Choose a readable font */
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Improve readability */
+    color: var(--text-color);
+    /* Use defined color */
+    background-color: var(--background-color);
+    /* Set page background */
+    /* padding: 20px; */
+    /* Add some spacing around the content */
+    background-color: #F2F5F6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Space below headings */
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+    /* Removes default browser styles */
+    cursor: pointer;
+    outline: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+
+/* video-section */
+#video-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 994px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #043A53;
+    padding: 2%;
+
+    .video-group {
+        width: 100%;
+        max-width: 1440px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        .label-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1140px;
+            height: 144px;
+            gap: 5px;
+
+            .label-header {
+                width: 60%;
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 72px;
+                color: #FFFFFF;
+                flex-direction: column;
+                display: flex;
+
+                .teams-professionals-text {
+                    color: #F0B73F;
+                    width: fit-content;
+                }
+
+                .high-level-sales-text {
+                    width: fit-content;
+                }
+            }
+
+            .label-description {
+                width: 40%;
+                font-family: Lato, sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+                text-align: justify;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 1130px;
+            max-height: 630px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .video-thumbnail {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+
+                .video-preview-image {
+                    width: 100%;
+                    height: fit-content;
+                    border-radius: 10px;
+                    display: block;
+                }
+
+                .play-icon-container {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 60px;
+                    color: rgba(0, 0, 0, 0.6);
+                    background: white;
+                    padding: 15px 30px;
+                    border-radius: 50%;
+                    transition: background 0.3s;
+                }
+
+                &:hover .play-icon-container {
+                    background: white;
+                }
+            }
+        }
+    }
+
+
+}
